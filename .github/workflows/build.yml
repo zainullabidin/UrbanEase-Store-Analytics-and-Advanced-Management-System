@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure CMake
+        run: cmake -B build 
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Verify binary exists
+        run: test -f build/urbanease && echo "Build successful" || exit 1
