@@ -1,4 +1,5 @@
 #include"store.h"
+#include"cluster.h"
 
 class V_REP{
 
