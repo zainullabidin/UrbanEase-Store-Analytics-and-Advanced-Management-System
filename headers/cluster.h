@@ -4,7 +4,7 @@
 #include<iostream>
 #include<cmath>
 
-#include "stores.h"
+#include "store.h"
 
 using namespace std;
 

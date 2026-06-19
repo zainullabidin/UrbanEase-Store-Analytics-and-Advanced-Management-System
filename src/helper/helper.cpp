@@ -4,6 +4,7 @@
 #include"store.h"
 #include"report.h"
 #include"helper.h"
+#include"cluster.h"
 
 using namespace std;
 
@@ -239,54 +240,54 @@ void starter(){
     system("clear");
     //implementing the visuals
 
-    V_REP objec;
-    objec.Visual_Charts(storePtr);
-    int storeIndex=0;
+//    // V_REP objec;
+//    // objec.Visual_Charts(storePtr);
+//     int storeIndex=0;
 
 
 
 
-    //chart01
-    cout << "Enter store index for monthly chart: ";
-    int_validatoe(storeIndex);
-    objec.chart_store(storeIndex);
+//     //chart01
+//     cout << "Enter store index for monthly chart: ";
+//     int_validatoe(storeIndex);
+//     objec.chart_store(storeIndex);
 
-    cout<<"\nPRESS Enter any key to continue .\n";
-cin.ignore();
-    getchar();
-    system("clear");
+//     cout<<"\nPRESS Enter any key to continue .\n";
+// cin.ignore();
+//     getchar();
+//     system("clear");
 
 
-//chart02
-    int count = 0;
-    cout << "ENTER the number of stores to compare: ";
+// //chart02
+//     int count = 0;
+//     cout << "ENTER the number of stores to compare: ";
 
-    int_validatoe(count);
+//     int_validatoe(count);
 
-    int* indices = new int[count];
+//     int* indices = new int[count];
 
-    for(int i = 0; i < count; i++)
-    {
-        cout << "Enter store index " << i+1 << ": ";
+//     for(int i = 0; i < count; i++)
+//     {
+//         cout << "Enter store index " << i+1 << ": ";
         
-        int_validatoe(indices[i]);
-        while(indices[i]>=t_stores)
-        {
-            cout<<"PLEASE Enter the stores within the range : "<<t_stores;
-            int_validatoe(indices[i]);
-        }
+//         int_validatoe(indices[i]);
+//         while(indices[i]>=t_stores)
+//         {
+//             cout<<"PLEASE Enter the stores within the range : "<<t_stores;
+//             int_validatoe(indices[i]);
+//         }
         
-    }
-    objec.chart_comparison(indices, count);
-    delete[] indices;
+//     }
+//     objec.chart_comparison(indices, count);
+//     delete[] indices;
 
-    cout<<"\n\n\nPRESS Enter any key to continue .\n";
+//     cout<<"\n\n\nPRESS Enter any key to continue .\n";
 
-    cin.ignore();
-    getchar();
-    system("clear");
-//3rd chart
-    objec.chart_clusters(obj);
+//     cin.ignore();
+//     getchar();
+//     system("clear");
+// //3rd chart
+//     objec.chart_clusters(obj);
 
 
 

@@ -5,7 +5,7 @@
 #include<cmath>
 #include<fstream>
 
-#include "stores.h"
+#include "store.h"
 
 using namespace std;
 

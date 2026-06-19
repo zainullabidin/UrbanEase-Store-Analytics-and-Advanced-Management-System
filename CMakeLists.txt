@@ -24,7 +24,7 @@ set(SOURCES
     src/report/report.cpp
     src/report/forecast.cpp
 
-    src/helper.cpp
+    src/helper/helper.cpp
 )
 
 add_executable(urbanease ${SOURCES})

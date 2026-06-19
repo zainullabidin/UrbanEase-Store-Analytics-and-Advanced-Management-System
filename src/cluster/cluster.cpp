@@ -1,5 +1,41 @@
 #include"cluster.h"
 
+
+    
+    Centroid::Centroid(){
+        latitute=0.0;
+        longitute=0.0;
+
+    }
+
+    double Centroid::get_latitute() const
+    {
+        return latitute;
+    }
+
+    void Centroid::set_latitute(double n) 
+    {
+        latitute=n;
+    }
+
+    double Centroid::get_longitute() const
+    {
+        return longitute;
+    }
+
+    void Centroid::set_longitute(double n) 
+    {
+        longitute=n;
+    }
+
+    bool Centroid::operator==(const Centroid &object)
+    {
+        if(abs(latitute-object.get_latitute())<0.0001&&abs(longitute-object.get_longitute())<0.0001)
+        return true;
+
+        return false;
+    }
+
     Cluster::Cluster(){
 
         cluster1cen=NULL;
