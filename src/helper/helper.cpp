@@ -78,7 +78,7 @@ using namespace std;
                 }
             
                 //writing to file
-                    ofstream datafile("data.txt");
+                    ofstream datafile("files/data.txt");
                     
                         datafile<<t_stores<<endl;
 
@@ -162,7 +162,7 @@ void starter(){
 
     start_menu(choice, flag);
 
-    ifstream file("data.txt");
+    ifstream file("files/data.txt");
     if(!file.is_open())
         flag = 1;
 

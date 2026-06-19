@@ -83,9 +83,9 @@
           i=rand()%main_size;
       
         *cluster1cen=arr[i];
-        int i2=0;
+        int i2=rand()%main_size;
         while(i2==i){
-    i2=rand()%main_size;
+        i2=rand()%main_size;
 }
         *cluster2cen=arr[i2];
 
@@ -127,24 +127,24 @@ int iter=100;
            p2=sqrt((center01_new.get_latitute()-center02_old.get_latitute())*(center01_new.get_latitute()-center02_old.get_latitute())+(center01_new.get_longitute()-center02_old.get_longitute())*(center01_new.get_longitute()-center02_old.get_longitute()));
 
 
-          if(p1>p2)
+          if(p1<p2)
           {
             
             
             CLUSTER01[i_c1]=&arr[i_mainarr];//asishning to C_!
             i_c1++;
-            cluster1cen->getcoords().setlatitude((center01_new.get_latitute()+ center01_old.get_latitute() *(i_c1-1))/i_c1);//updating centers
-            cluster1cen->getcoords().setlongitude((center01_new.get_longitute()+ center01_old.get_longitute()*(i_c1-1) )/i_c1);
+            cluster1cen->getcoords().setlatitude((center01_new.get_latitute()+ cluster1cen->getcoords().getlatitude() *(i_c1-1))/i_c1);//updating centers
+            cluster1cen->getcoords().setlongitude((center01_new.get_longitute()+ cluster1cen->getcoords().getlongitude()*(i_c1-1) )/i_c1);
 
          }
-         else if (p2>p1)
+         else if (p2<p1)
          {
             CLUSTER02[i_c2]=&arr[i_mainarr]; //assigning to c2
             i_c2++;
 
 
-            cluster2cen->getcoords().setlatitude((center01_new.get_latitute()+ center02_old.get_latitute()*(i_c2-1) )/i_c2);//updating centers
-            cluster2cen->getcoords().setlongitude((center01_new.get_longitute()+ center02_old.get_longitute() *(i_c2-1))/i_c2);
+            cluster2cen->getcoords().setlatitude((center01_new.get_latitute()+ cluster2cen->getcoords().getlatitude()*(i_c2-1) )/i_c2);//updating centers
+            cluster2cen->getcoords().setlongitude((center01_new.get_longitute()+ cluster2cen->getcoords().getlongitude() *(i_c2-1))/i_c2);
 
          }else
          {
@@ -153,15 +153,15 @@ int iter=100;
                 CLUSTER01[i_c1]=&arr[i_mainarr];//assigning to c1
                 i_c1++;
                
-               cluster1cen->getcoords().setlatitude((center01_new.get_latitute()+ center01_old.get_latitute()*(i_c1-1) )/i_c1);//updating centers
-              cluster1cen->getcoords().setlongitude((center01_new.get_longitute()+ center01_old.get_longitute() *(i_c1-1))/i_c1);
+               cluster1cen->getcoords().setlatitude((center01_new.get_latitute()+ cluster1cen->getcoords().getlatitude()*(i_c1-1) )/i_c1);//updating centers
+              cluster1cen->getcoords().setlongitude((center01_new.get_longitute()+ cluster1cen->getcoords().getlongitude() *(i_c1-1))/i_c1);
             }
             else{
                   CLUSTER02[i_c2]=&arr[i_mainarr];//assigning to c2
                    i_c2++;
 
-                 cluster2cen->getcoords().setlatitude((center01_new.get_latitute()+ center02_old.get_latitute() *(i_c2-1))/i_c2);//updating centers
-                  cluster2cen->getcoords().setlongitude((center01_new.get_longitute()+ center02_old.get_longitute() *(i_c2-1))/i_c2);
+                 cluster2cen->getcoords().setlatitude((center01_new.get_latitute()+ cluster2cen->getcoords().getlatitude() *(i_c2-1))/i_c2);//updating centers
+                  cluster2cen->getcoords().setlongitude((center01_new.get_longitute()+ cluster2cen->getcoords().getlongitude() *(i_c2-1))/i_c2);
             }
          }
 
