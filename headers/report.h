@@ -1,9 +1,13 @@
 #pragma once
 
+# define BRIGHT_RED "\033[91m"
+# define RESET "\033[0m"
+
 #include<string>
 #include<iostream>
 #include<cmath>
 #include<fstream>
+#include<iomanip> 
 
 #include "store.h"
 

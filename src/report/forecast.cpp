@@ -1,4 +1,5 @@
 #include"report.h"
+
    
    Forecast::Forecast(){
         ptr=NULL;
@@ -14,13 +15,13 @@
     void Forecast::displayer(){
 
       
-        cout<<"\n                                                     FORCAST REPORT \n";
+        cout<<"\n                                         ^^^^^^^^>>>>>>>>>> FORCAST REPORT <<<<<<<<<<^^^^^^^^\n\n";
         for(int i=0;i<10;i++)
         {
-            cout<<i+1<<"   "<<ptr[i]->getname()<<"        PREDICTED: "<<Predicted_S[i]<<"          CONFIDENCE : "<<confidence[i]<<endl;
+            cout<<BRIGHT_RED<<i+1<<RESET<<"   "<<ptr[i]->getname()<<"        PREDICTED: "<<Predicted_S[i]<<"          CONFIDENCE : "<<confidence[i]<<endl;
             if(Predicted_S[i] < ptr[i]->getanalytics().getmonthlySales(ptr[i]->getanalytics().get_Toata_M()-1))
             {
-                cout<<"\nALERT-----ALERT-------ALERT-----::::::DECLINE EXPECTED\n";
+                cout<<"ALERT"<<BRIGHT_RED<<"-----"<<RESET<<"ALERT"<<BRIGHT_RED<<"-------"<<RESET<<"ALERT"<<BRIGHT_RED<<"-----"<<RESET<<"::::::"<<"DECLINE EXPECTED. ^^^\n";
             }
         }
 

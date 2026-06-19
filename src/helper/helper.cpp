@@ -8,6 +8,22 @@
 
 using namespace std;
 
+
+    void top(){
+            system("clear");
+
+            string x =
+"                                                      ██╗     ███████╗████████╗   ███████╗    ███████╗████████╗ █████╗ ██████╗ ████████╗\n"
+"                                                      ██║     ██╔════╝╚══██╔══╝   ██╔════╝    ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗╚══██╔══╝\n"
+"                                                      ██║     █████╗     ██║      ███████╗    ███████╗   ██║   ███████║██████╔╝   ██║   \n"
+"                                                      ██║     ██╔══╝     ██║      ╚════██║    ╚════██║   ██║   ██╔══██║██╔══██╗   ██║   \n"
+"                                                      ███████╗███████╗   ██║      ███████║    ███████║   ██║   ██║  ██║██║  ██║   ██║   \n"
+"                                                      ╚══════╝╚══════╝   ╚═╝      ╚══════╝    ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   \n";
+
+
+      cout<<x<<endl<<endl<<endl<<endl;
+    }
+
     void datagen(Store *& object, int t_stores)
     {
         //some arrays for randomized datagen
@@ -93,18 +109,23 @@ using namespace std;
 
     void start_menu(int &choice, int &flag)
     {
-        cout<<"1. Load from file\n\n2. Generate new data\n";
+     
+
+top();
+
+
+        cout<<"   1. Load from file\n\n   2. Generate new data\n";
         do{
         if(flag)
         {
-            cout<<"ENTER AGAIN.....       :";
+            cout<<"\n   ENTER AGAIN.....       :";
             cin>>choice;
             flag=0;
         }
 
         else
         {
-            cout<<"Please ENTER your choice : ";
+            cout<<"\n   Please ENTER your choice : ";
             cin>>choice;
             flag=0;
         }
@@ -132,8 +153,7 @@ using namespace std;
              cout<<" DATA SUCCESSFULLY LOADED FROM \"data.txt\"";
     }
 
-
-  void int_validatoe(int & n)
+    void int_validatoe(int & n)
   {
     
     int flag=0;
@@ -150,9 +170,7 @@ using namespace std;
     } while(true);
 }
 
-
-
-void starter(){
+    void starter(){
 
       srand(time(0));
     //HELLALUJAH
@@ -165,7 +183,7 @@ void starter(){
     ifstream file("files/data.txt");
     if(!file.is_open())
         flag = 1;
-
+top();
     //data load
     if(choice == 1 && !flag)
     {
@@ -208,9 +226,10 @@ void starter(){
     cout << obj;
 
     cout<<"\nPRESS Enter any key to continue .\n";
+  
     cin.ignore();
     getchar();
-    system("clear");
+top();
 
     //MAIN ARRRRRR
     Store **storePtr = new Store*[t_stores];
@@ -225,7 +244,7 @@ void starter(){
     cout<<"\n\n\nPRESS Enter any key to continue .\n";
 
     getchar();
-    system("clear");
+top();
 
 
     //FORECASTER
@@ -237,7 +256,7 @@ void starter(){
     cout<<"\n\n\nPRESS Enter any key to continue .\n";
 
     getchar();
-    system("clear");
+top();
     //implementing the visuals
 
 //    // V_REP objec;
@@ -291,12 +310,12 @@ void starter(){
 
 
 
-    cout<<"\n\n\nPRESS Enter any key to continue .\n";
+//     cout<<"\n\n\nPRESS Enter any key to continue .\n";
 
-    cin.ignore();
-    getchar();
-    system("clear");
-    // ++/--
+//     cin.ignore();
+//     getchar();
+//     system("clear");
+//     // ++/--
 
 
 

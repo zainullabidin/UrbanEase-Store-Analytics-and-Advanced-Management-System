@@ -1,5 +1,6 @@
 #include"report.h"
 
+
     Report::Report() {
 
         ptr=NULL;
@@ -217,14 +218,13 @@
         cout<<"\n                                                   TOP 10 STORES \n";
         for(int i=0;i<10;i++)
         {
-            cout<<i+1<<"   "<<ptr[i]->getname()<<"     REPORT STAT: "<<arr[i]<<endl;
+             cout<<right<<setw(5)<<i+1<<"   "<<left<<setw(30)<<ptr[i]->getname()<<"REPORT STAT: "<<right<<fixed<<setprecision(6)<<setw(10)<<arr[i]<<endl;
         }
         cout<<"\n                                                  BOTTOM  05  STORES \n";
         for(int i=t_stores-5;i<t_stores;i++)
         {
-            cout<<i+1<<"   "<<ptr[i]->getname()<<"     REPORT STAT: "<<arr[i]<<endl;
+             cout<<right<<setw(5)<<i+1<<"   "<<left<<setw(30)<<ptr[i]->getname()<<"REPORT STAT: "<<right<<fixed<<setprecision(6)<<setw(10)<<arr[i]<<endl;
         }
-
     }
 
     ostream& operator<<(ostream & obj,Report & r)
