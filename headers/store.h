@@ -4,6 +4,9 @@
 #include<iostream>
 
 #include"stakeholder.h"
+#include"analytics.h"
+
+class Coordinates;
 
 using namespace std;
 
@@ -59,5 +62,26 @@ public:
     friend ostream& operator << (ostream& out, const Store& object);
 
     void data_save(ofstream& data_file);
+
+};
+
+class Coordinates{
+
+private:
+    double latitude;
+    double longitude;
+
+public:
+    Coordinates();
+
+    double getlatitude()const;
+
+    void setlatitude(double n);
+
+    double getlongitude()const;
+
+    void setlongitude(double n);
+
+    void loaddata_coords(ifstream &datafile);
 
 };

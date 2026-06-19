@@ -5,6 +5,7 @@
 #include<ctime>
 #include<fstream>
 #include<cmath>
+
 using namespace std;
 
 class Store;
