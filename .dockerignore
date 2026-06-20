@@ -1,0 +1,9 @@
+build/
+.git/
+.vscode/
+.idea/
+.DS_Store
+*.o
+*.out
+files/
+__MACOSX/
