@@ -134,4 +134,4 @@ docker-compose runs two services — the app itself (interactive, so you can typ
 
 ## Author
 
-Zain ul Abidin
+Zain Ul Abidin
