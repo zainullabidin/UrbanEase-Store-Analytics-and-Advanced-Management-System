@@ -10,13 +10,12 @@ V_REP::V_REP(){
     void V_REP::Visual_Charts(Store ** &ptr){
 
         PTR=ptr;
-        system("mkdir -p output");
-
+      system("mkdir -p files/charts");
     }
 
     void V_REP::chart_store(int storeIndex)
     {
-        ofstream html("output/chart_store.html");
+        ofstream html("files/charts/chart_store.html");
 
         html<<"<!DOCTYPE html><html><head><script src='https://cdn.jsdelivr.net/npm/chart.js'></script></head><body>";
         html<<"<h2>"<<PTR[storeIndex]->getname()<<" - Monthly Sales</h2>";
@@ -45,7 +44,7 @@ V_REP::V_REP(){
         double p=0.0;
         double s=0.0,c=0.0;
 
-        ofstream html("output/chart_comparison.html");
+        ofstream html("files/charts/chart_comparison.html");
 
         html<<"<!DOCTYPE html><html><head><script src='https://cdn.jsdelivr.net/npm/chart.js'></script></head><body>";
         html<<"<h2>Store Profit Comparison</h2>";
@@ -102,7 +101,7 @@ V_REP::V_REP(){
             profit02+=s-op;
         }
 
-        ofstream html("output/chart_clusters.html");
+        ofstream html("files/charts/chart_clusters.html");
 
         html<<"<!DOCTYPE html><html><head><script src='https://cdn.jsdelivr.net/npm/chart.js'></script></head><body>";
         html<<"<h2>Cluster-wise Profits</h2>";
@@ -113,7 +112,7 @@ V_REP::V_REP(){
         html<<"]}]}});</script></body></html>";
         html.close();
 
-        cout<<"\n Chart saved to output/chart_clusters.html\n";
+        cout<<"\n Chart saved to files/chartschart_clusters.html\n";
     }
 
     V_REP::~V_REP(){
