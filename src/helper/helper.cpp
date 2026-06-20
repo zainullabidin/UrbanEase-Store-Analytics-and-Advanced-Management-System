@@ -25,6 +25,48 @@ using namespace std;
       cout<<x<<endl<<endl<<endl<<endl;
     }
 
+    void pro(){
+
+                system("clear");
+
+        string name =
+"                                                        ██████╗ ██████╗  ██████╗  ██████╗███████╗███████╗██╗███╗   ██╗ ██████╗ \n"
+"                                                        ██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔════╝██║████╗  ██║██╔════╝ \n"
+"                                                        ██████╔╝██████╔╝██║   ██║██║     █████╗  ███████╗██║██╔██╗ ██║██║  ███╗\n"
+"                                                        ██╔═══╝ ██╔══██╗██║   ██║██║     ██╔══╝  ╚════██║██║██║╚██╗██║██║   ██║\n"
+"                                                        ██║     ██║  ██║╚██████╔╝╚██████╗███████╗███████║██║██║ ╚████║╚██████╔╝\n"
+"                                                        ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ \n";
+
+cout<<name<<endl<<endl<<endl<<endl;
+    }
+
+    void processing(){
+
+        system("clear");
+        string name =
+"                                                       ██████╗ ██████╗  ██████╗  ██████╗███████╗███████╗███████╗██████╗ \n"
+"                                                       ██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔════╝██╔════╝██╔══██╗\n"
+"                                                       ██████╔╝██████╔╝██║   ██║██║     █████╗  ███████╗█████╗  ██║  ██║\n"
+"                                                       ██╔═══╝ ██╔══██╗██║   ██║██║     ██╔══╝  ╚════██║██╔══╝  ██║  ██║\n"
+"                                                       ██║     ██║  ██║╚██████╔╝╚██████╗███████╗███████║███████╗██████╔╝\n"
+"                                                       ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚══════╝╚══════╝╚══════╝╚═════╝ \n";
+
+cout<<name<<endl<<endl<<endl<<endl;
+    }
+
+    void generated(){
+ system("clear");
+        string name =
+"                                                         ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ████████╗███████╗██████╗ \n"
+"                                                        ██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\n"
+"                                                        ██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║   ██║   █████╗  ██║  ██║\n"
+"                                                        ██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║   ██║   ██╔══╝  ██║  ██║\n"
+"                                                        ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║   ██║   ███████╗██████╔╝\n"
+"                                                         ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝ \n";
+        
+    cout<<name<<endl<<endl<<endl<<endl;
+}
+
     void datagen(Store *& object, int t_stores)
     {
         //some arrays for randomized datagen
@@ -184,7 +226,7 @@ top();
     ifstream file("files/data.txt");
     if(!file.is_open())
         flag = 1;
-top();
+ processing();
     //data load
     if(choice == 1 && !flag)
     {
@@ -230,7 +272,7 @@ top();
   
     cin.ignore();
     getchar();
-top();
+processing();
 
     //MAIN ARRRRRR
     Store **storePtr = new Store*[t_stores];
@@ -245,7 +287,7 @@ top();
     cout<<"\n\n\nPRESS Enter any key to continue .\n";
 
     getchar();
-top();
+processing();
 
 
     //FORECASTER
@@ -257,7 +299,7 @@ top();
     cout<<"\n\n\nPRESS Enter any key to continue .\n";
 
     getchar();
-top();
+processing();
     //implementing the visuals
 
    V_REP objec;
@@ -266,7 +308,7 @@ top();
 
 
 
-
+pro();
 //     //chart01
     cout << "Enter store index for monthly chart: ";
     int_validatoe(storeIndex);
@@ -277,7 +319,7 @@ top();
     getchar();
     system("clear");
 
-
+pro();
 // //chart02
     int count = 0;
     cout << "ENTER the number of stores to compare: ";
@@ -305,14 +347,15 @@ top();
 
     cin.ignore();
     getchar();
-    system("clear");
+pro();
 // //3rd chart
     objec.chart_clusters(obj);
 
 
 
     cout<<"\n\n\nPRESS Enter any key to continue .\n";
-
+generated();
+     cout<<"\n\n\nPRESS ENTER KEY AND CHECK THE GENERATED GRAPHS.\n";
     cin.ignore();
     getchar();
     system("clear");
