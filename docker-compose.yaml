@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./files:/usr/src/app/files
+
+
+  web:
+    image: nginx:alpine
+    ports: 
+      - "8080:80"
+    volumes:
+      - ./files/charts:/usr/share/nginx/html
+    depends_on:
+      - app
